@@ -12,7 +12,7 @@ abstract class HMAC implements SignerInterface
      */
     public function sign($input, $key)
     {
-        return hash_hmac($this->getHashingAlgorithm(), $input, $key);
+        return hash_hmac($this->getHashingAlgorithm(), $input, $key, true);
     }
 
     /**
